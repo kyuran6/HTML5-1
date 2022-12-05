@@ -6,9 +6,15 @@
   box-sizing: border-box;
 }
 
+/* 링크 스타일 */
+a{
+  color: inherit;
+  text-decoration: none;
+}
 
 /* 본문 스타일 */
 body {
+  color: #000;
   background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -21,7 +27,7 @@ body {
 
 /* 헤더 */
 .header{
-  background: white;
+  background: #fff;
   padding: 0 30px;
   height: 15vh;
   border-radius: 0 0 15px 15px;
@@ -30,15 +36,31 @@ body {
 
 /* 로고 */
 .logo{
-  background-color : blue;
-  position : absolute;
+  position: absolute;
   top: 45px;
-  left: 50px;
+  left: 60px;
 }
 
 /* 텍스트 링크 모음 */
 .member{
-  background-color: aqua;
+ background-color: aqua;
+  text-align: right;
+  padding: 4px 0;
+}
+
+.member li{
+  /*background-color: pink;*/
+  display : inline-block;
+}
+
+.member a{
+  background-color: coral;
+  padding: 6px;
+  display: inherit;
+}
+
+.divider{
+  margin-right: 4px;
 }
 
 /* 비주얼 */
@@ -49,19 +71,20 @@ body {
 /* 메인 */
 .main{
   background: lightgreen;
-  min-height: 450px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 30px;
+  height: 50vh;
+  display: flow-root;
+  padding: 0 15px;
+}
+
+.group{
+  margin: 0 15px;
+  float: left;
 }
 
 .group1{
   background-color: violet;
-  width: 250px; 
+  width: 250px;
 }
-
 .group2{
   background-color: salmon;
   width: 380px;
