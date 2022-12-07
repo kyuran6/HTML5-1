@@ -32,7 +32,8 @@ body {
   /* em, rem 단위를 사용해보기 */
   font-size: 1.4rem;
   color: #212121;
-  background: #ccc;
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
@@ -95,7 +96,12 @@ body {
 }
 
 /* 메인 메뉴 */
+.navigation {
+  padding-bottom: 80px;
+}
+
 .menu {
+  border-top: 2px solid currentColor;
   background: #e85e2c
     linear-gradient(
       to bottom,
@@ -104,6 +110,46 @@ body {
       #e85e2c 70%,
       #ef9126 100%
     );
+  border-radius: 0 0 5px 5px;
+  padding-left: 230px;
+  height: 47px;
+}
+
+.menu-item {
+  float: left;
+  border-left: 2px solid #fff;
+}
+
+.menu-button {
+  border: 0;
+  background: transparent;
+  padding: 0 18px;
+  line-height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+/* 구체성 -> 20점 */
+.is-active .menu-button{
+  color: #ff0;
+}
+
+.is-active .menu-button::after{
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+
+.sub-menu {
+  background-color: pink;
+  position: absolute;
+  display: none;
+}
+
+.is-active .sub-menu{
+  display: flex;
 }
 
 /* 비주얼 */
@@ -145,7 +191,8 @@ body {
 }
 /* 푸터 */
 .footer {
-  background: gray;
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 .footer-inner {
   background: silver;
